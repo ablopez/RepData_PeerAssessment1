@@ -103,7 +103,7 @@ describe(myDat)
 ## lowest : 0    10   100  1000 1005, highest: 935  940  945  950  955  
 ## ---------------------------------------------------------------------------
 ```
-# 2 - Process/transform the data into a format suitable for your analysis
+## 2 - Process/transform the data into a format suitable for your analysis
 
 ```r
 # Removing entries with NA
@@ -343,7 +343,7 @@ sum(is.na(imputed))
 ## [1] 0
 ```
 
-4. Make a histogram of the total number of steps taken each day and Calculate and report the mean and median total number of steps taken per day. Do these values differ from the estimates from the first part of the assignment? What is the impact of imputing missing data on the estimates of the total daily number of steps?
+## 4. Make a histogram of the total number of steps taken each day and Calculate and report the mean and median total number of steps taken per day. Do these values differ from the estimates from the first part of the assignment? What is the impact of imputing missing data on the estimates of the total daily number of steps?
 
 
 ```r
@@ -512,7 +512,7 @@ levels(imputed$weekdays) <- list(weekday = c("Monday", "Tuesday",               
 ## ---------------------------------------------------------------------------
 ```
 
-# 2 - Make a panel plot containing a time series plot (i.e. type = "l") of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all weekday days or weekend days (y-axis).
+## 2 - Make a panel plot containing a time series plot (i.e. type = "l") of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all weekday days or weekend days (y-axis).
 
 ```r
 Mymean <- aggregate(imputed$steps,list(interval = as.numeric(as.character(imputed$interval)), weekdays = imputed$weekdays),FUN = "mean")
